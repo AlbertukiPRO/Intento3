@@ -7,28 +7,41 @@
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
         <title>BootsFaces Basic Page</title>
+        <h:outputStylesheet name="css/main.css" />
     </h:head>
+
     <h:body>
-        <b:alert severity="warning" title="Warning Title" closable="true">
-            <strong>Warning!</strong> Best check yo self, you're not looking too good.
-        </b:alert>
-        <b:container id="menu">
-            <b:navBar brand="KP's Brand" inverse="true" brandHref="#" fixed="top">
-                <b:navbarLinks>
-                    <b:navLink value="home" iconAwesome="home" href="#"></b:navLink>
-                    <b:navLink value="Cricket" icon="cross" href="#"></b:navLink>
-                    <b:navLink value="football" href="#"></b:navLink>
-                    <b:navLink value="Sports" href="#"></b:navLink>
-                </b:navbarLinks>
-            </b:navBar>
-        </b:container>
-        <b:container fluid="true">
-            <b:row>
-                <b:column>
-                    <h:outputText  value="Hola amigos"/>
-                </b:column>
-            </b:row>
-        </b:container>
+        <b:navBar brandHref="#" fluid="true" styleClass="Container-NAV">
+            <div class="col-xs-12 header"><h1>hola</h1></div>
+            <b:container styleClass="col-xs-2 "></b:container>
+            <b:navbarLinks styleClass="col-xs-8">
+                <b:navLink value="Inicio" style="color:white;" href="#"></b:navLink>
+                <b:navLink value="Biblioteca" style="color:white;" href="#"></b:navLink>
+                <b:dropMenu style="color:white;" value="Servicios Estudiantiles">
+                    <b:navLink value="Boletas" href="#"></b:navLink>
+                    <b:navLink value="Carga de expediente digital" href="#"></b:navLink>
+                    <b:navLink value="Carga de fotografia y firma" href="#"></b:navLink>
+                    <b:navLink></b:navLink>
+                    <b:navLink header="Nav header"></b:navLink>
+                    <b:navLink value="Separated link" href="#"></b:navLink>
+                    <b:dropMenu value="Nested submenu" iconAwesome="birthday-cake" iconAlign="right">
+                        <b:navLink value="You can nest menus" href="#"></b:navLink>
+                        <b:dropMenu value="Nested sub-submenu">
+                            <b:navLink value="... as deep as ..." href="#"></b:navLink>
+                            <b:dropMenu value="Nested sub-sub-submenu">
+                                <b:navLink value="... you want!" href="#"></b:navLink>
+                            </b:dropMenu>
+                        </b:dropMenu>
+                    </b:dropMenu>
+                    <b:navLink value="One more separated link" href="#"></b:navLink>
+                </b:dropMenu>
+                <b:dropMenu style="color:white;" value="Servicios Universitarios">
+
+                </b:dropMenu>
+            </b:navbarLinks>
+            <b:container fluid="true" styleClass="col-xs-2">
+            </b:container>
+        </b:navBar>
     </h:body>
 </html>
                  
